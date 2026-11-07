@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-100 text-slate-900 dark:bg-slate-950 dark:text-slate-100 font-sans antialiased min-h-screen selection:bg-brand-500 selection:text-white transition-colors duration-300;
+  }
+}
+
+/* Global Glassmorphism & Panel Utilities */
+.glass-panel {
+  @apply bg-white border border-slate-200/90 shadow-md rounded-2xl dark:bg-slate-900/80 dark:border-slate-800/80 dark:shadow-xl backdrop-blur-md transition-colors duration-300;
+}
+
+.glass-card {
+  @apply bg-white border border-slate-200/90 shadow-sm rounded-xl p-5 hover:border-brand-500/50 dark:bg-slate-800/50 dark:border-slate-700/60 dark:hover:border-brand-500/50 backdrop-blur-sm transition-all duration-300;
+}
+
+.gradient-text {
+  @apply bg-gradient-to-r from-brand-600 via-indigo-600 to-purple-600 dark:from-brand-400 dark:via-indigo-400 dark:to-purple-400 bg-clip-text text-transparent;
+}
+
+.gradient-btn {
+  @apply bg-gradient-to-r from-brand-600 to-indigo-600 hover:from-brand-500 hover:to-indigo-500 text-white font-semibold shadow-md shadow-brand-500/20 transition-all duration-300 active:scale-[0.98];
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-slate-200 dark:bg-slate-950;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 dark:bg-slate-800 rounded-md;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-brand-500 dark:bg-brand-500;
+}
